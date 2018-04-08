@@ -6,3 +6,8 @@ yarn.lock
 # Static
 src/static/scenarios
 src/static/scripts
+
+# Windows
+Kamihime Player.bat
+Kamihime Player.lnk
+khpr.ico
