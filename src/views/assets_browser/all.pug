@@ -1,0 +1,7 @@
+- const { eidolon, r, soul, sr, ssr, ssra } = characters;
+- let all = eidolon.concat(r, soul, sr, ssr, ssra);
+- all = all.map(i => i.name).sort();
+
+- for(const character of all)
+  div(id = 'name' name = character)
+    strong <a href = '/info/#{character}'>#{character}</a>

@@ -1,0 +1,8 @@
+# Package Manager
+node_modules/
+package-lock.json
+yarn.lock
+
+# Static
+src/static/scenarios
+src/static/scripts

@@ -1,0 +1,26 @@
+{
+  "name": "kamihime-player",
+  "version": "1.0.0",
+  "description": "Kamihime Player NodeJS Port [From RenPy version by Eliont]",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "eslint ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gazmull/kamihime-player.git"
+  },
+  "author": "gazmull",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gazmull/kamihime-player/issues"
+  },
+  "homepage": "https://github.com/gazmull/kamihime-player#readme",
+  "devDependencies": {
+    "eslint": "^4.18.1"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "pug": "^2.0.3"
+  }
+}

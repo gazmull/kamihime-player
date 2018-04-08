@@ -1,0 +1,17 @@
+doctype html
+
+html
+
+  head
+    link(rel = 'stylesheet' href = '/browser/style.css')
+    title Kamihime Player - Error
+
+  body
+    ul
+      include ../constants/navigation.pug
+      li(style="float: right; user-select: none;")
+        a Error: 500
+    center
+      br
+      img(src = '/img/S.png' alt = 'Sorry...')
+      h1 Something went wrong. Please check the terminal!

@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway');
+
+ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin: -8px -7px;
+  background-color: #222222;
+}
+
+li {
+  display: inline-block;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border: 1px solid #222222;
+}
+
+li a:hover {
+  background-color: #ec7ae3;
+  border: 1px solid #f5bbf2;
+}
+
+li a:active {
+  border: 1px solid #f5bbf2;
+  background-color: #2f3136;
+  color: white;
+}
+
+body {
+  background-color: #2f3136;
+  color: #a7aebc;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  color: #ffaabf;
+}
+
+h2 {
+  color: #ffffff;
+  text-align: left;
+}
+
+.avWA {
+  margin: auto;
+  background-color: #484b51;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  border-color: #ffaabf;
+}
+
+.avWA::placeholder {
+  color: #888888;
+}
+
+.toggleForm {
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#control {
+  float: left;
+  position: fixed;
+  z-index: 9;
+  top: 60px;
+}
+
+#buttons {
+  position: relative;
+  float: left;
+}
+
+#search {
+  position: relative;
+  float: left;
+  margin-left: 5px;
+  margin-top:8px;
+}
+
+#characters {
+  margin-left: 15px;
+}
+
+#name {
+  display: block;
+  word-spacing: -1;
+}
+
+#name a:link,
+#name a:visited {
+  font-size: 18px;
+  color: #fa64e1;
+  text-decoration: none;
+}
+
+#name a:hover {
+  color: white;
+}
+
+/* fix for mozilla firefox outlines */
+
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
