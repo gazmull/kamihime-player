@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const { promisify } = require('util');
 
-const characters = require('./static/scenarios/config.json');
+const characters = require(`${__dirname}/static/scenarios/config.json`);
 
 const app = express();
 const readFile = promisify(fs.readFile);
@@ -21,8 +21,8 @@ const findCharacter = id => {
 
 app
   .set('view engine', 'pug')
-  .set('views', './src/views')
-  .use(express.static('./src/static'))
+  .set('views', `${__dirname}/views`)
+  .use(express.static(`${__dirname}/static`))
   .get('/', (_, res) => res.render('browser', { characters }))
   .get('/info/:id', (req, res) => {
     const { id = 'nein' } = req.params;
@@ -44,12 +44,12 @@ app
             ? 'player/legacy'
             : null;
       const character = findCharacter(id);
-      const script = JSON.parse(await readFile(`./src/static/scenarios/${id}/${resource}/script.json`));
+      const script = JSON.parse(await readFile(`${__dirname}/static/scenarios/${id}/${resource}/script.json`));
 
       if (!(template || character || script)) return res.render('invalids/422');
 
       const data = {
-        files: await readdir(`./src/static/scenarios/${id}/${resource}/`),
+        files: await readdir(`${__dirname}/static/scenarios/${id}/${resource}/`),
         script: script.scenario,
         res: `/scenarios/${id}/${resource}`
       };
