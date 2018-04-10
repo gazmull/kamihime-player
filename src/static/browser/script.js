@@ -28,12 +28,12 @@ $(() => {
 
     $('#searchBar').val('');
     $(`${$btnCode} > div[class='hiddenInstant']`)
-      .attr('class', 'container visible')
+      .attr('class', 'visible')
       .css('position', 'relative');
     $($btnCode).attr('class', 'visible');
     $(`#${$btnID}`).css('background-color', '#ff65ae');
     $(`#characters > div[id!='${$btnCode_sliced}']`).attr('class', 'hidden');
-    $(`#characters > div[id!='${$btnCode_sliced}'] > div[class='container visible']`)
+    $(`#characters > div[id!='${$btnCode_sliced}'] > div[class='visible']`)
       .attr('class', 'hiddenInstant')
       .css('position', 'absolute');
     $(`#buttons > button[id!='${$btnID}']`).css('background-color', '#666f8b');
