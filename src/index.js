@@ -19,18 +19,23 @@ const findCharacter = id => {
   return character.shift();
 };
 
+const findScript = async (id, res) => JSON.parse(await readFile(`${__dirname}/static/scenarios/${id}/${res}/script.json`));
+
 app
   .set('view engine', 'pug')
   .set('views', `${__dirname}/views`)
   .use(express.static(`${__dirname}/static`))
   .get('/', (_, res) => res.render('browser', { characters }))
-  .get('/info/:id', (req, res) => {
+  .get('/info/:id', async (req, res) => {
     const { id = 'nein' } = req.params;
     const character = findCharacter(id);
 
     if (!character) return res.render('invalids/422');
 
-    res.render('info', { character });
+    const script = await findScript(id, character.harem1.resource);
+    const cleanID = id.replace(/([([].+[)\]])/, ' ').trim();
+
+    res.render('info', { character, model: script.model[cleanID] });
   })
   .get('/player/:id/:type/:resource', async (req, res) => {
     const { id, type, resource } = req.params;
@@ -44,7 +49,7 @@ app
             ? 'player/legacy'
             : null;
       const character = findCharacter(id);
-      const script = JSON.parse(await readFile(`${__dirname}/static/scenarios/${id}/${resource}/script.json`));
+      const script = await findScript(id, resource);
 
       if (!(template || character || script)) return res.render('invalids/422');
 

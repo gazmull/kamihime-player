@@ -73,3 +73,11 @@ h2 {
 .buttons a:hover {
   color: white;
 }
+
+#model {
+  position: absolute;
+  z-index: -1;
+  top: 52px;
+  right: 0;
+  opacity: 0.3;
+}
