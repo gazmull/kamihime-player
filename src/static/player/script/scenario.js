@@ -26,7 +26,7 @@ $(() => {
       class: 'animate'
     })
       .css({
-        'background-image': `url('${res}/${image}')`,
+        'background-image': `url("${res}/${image}")`,
         position: 'absolute',
         visibility: 'hidden',
         top: '-130px',

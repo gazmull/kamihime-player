@@ -13,7 +13,7 @@ html
   body
     ul
       include constants/navigation.pug
-      li(style="float: right; user-select: none;")
+      li(style='float: right; user-select: none;')
         +name
     br
     #episodes
@@ -29,11 +29,11 @@ html
         .buttons
 
           - if (episode.resource)
-            strong <a href = '/player/#{name}/story/#{episode.resource}'>Story</a>
+            strong <a href = "/player/#{name}/story/#{episode.resource}">Story</a>
 
           - if (episode.resource2)
-            | | <strong><a href = '/player/#{name}/scenario/#{episode.resource2}'>Scenario</a></strong>
-            | | <strong><a href = '/player/#{name}/legacy/#{episode.resource2}'>Scenario (Legacy)</a></strong>
+            | | <strong><a href = "/player/#{name}/scenario/#{episode.resource2}">Scenario</a></strong>
+            | | <strong><a href = "/player/#{name}/legacy/#{episode.resource2}">Scenario (Legacy)</a></strong>
         blockquote
           p #{episode.summary}
     #model

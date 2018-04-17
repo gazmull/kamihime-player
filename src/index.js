@@ -30,7 +30,7 @@ app
     const { id = 'nein' } = req.params;
     const character = findCharacter(id);
 
-    if (!character) return res.render('invalids/422');
+    if (!character || !character.harem1.resource) return res.render('invalids/422');
 
     const script = await findScript(id, character.harem1.resource);
     const cleanID = id.replace(/([([].+[)\]])/, ' ').trim();
