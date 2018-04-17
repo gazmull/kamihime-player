@@ -79,5 +79,11 @@ h2 {
   z-index: -1;
   top: 52px;
   right: 0;
-  opacity: 0.3;
+  opacity: 0.2;
+  mask-image:
+    radial-gradient(circle at center 35%, black 50%, transparent 78%);
+  -webkit-mask-image:
+    radial-gradient(circle at center 35%, black 50%, transparent 78%);
+  -moz-mask-image:
+    radial-gradient(circle at center 35%, black 50%, transparent 78%);
 }
