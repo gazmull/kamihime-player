@@ -28,9 +28,17 @@ app
   .get('/', (_, res) => res.render('browser', { characters }))
   .get('/info/:id', async (req, res) => {
     const { id = 'nein' } = req.params;
+    const { image = false } = req.query;
     const character = findCharacter(id);
 
     if (!character || !character.harem1.resource) return res.render('invalids/422');
+    if (image) {
+      const img = fs.createReadStream(`${__dirname}/static/scenarios/0000/misc/${character.model}`);
+
+      res.setHeader('Content-Type', 'image/png');
+
+      return img.pipe(res);
+    }
 
     const script = await findScript(id, character.harem1.resource);
     const cleanID = id.replace(/([([].+[)\]])/, ' ').trim();

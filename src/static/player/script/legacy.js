@@ -88,6 +88,7 @@ $(() => {
     const hidden = {
       position: 'absolute',
       visibility: 'hidden',
+      'background-position-y': '0px',
       animation: 'play 1s steps(1) infinite',
       '-webkit-animation': 'play 1s steps(1) infinite',
       '-moz-animation': 'play 1s steps(1) infinite',

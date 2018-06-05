@@ -125,6 +125,7 @@ $(() => {
     const hidden = {
       position: 'absolute',
       visibility: 'hidden',
+      'background-position-y': '0px',
       animation: 'play 1s steps(1) infinite',
       '-webkit-animation': 'play 1s steps(1) infinite',
       '-moz-animation': 'play 1s steps(1) infinite',
@@ -136,16 +137,16 @@ $(() => {
       $(`#image > div[id='${lastImage}']`)
         .css(hidden);
 
-    const isAD = ['_a.jpg', '_d.jpg'].some(i => lastImage && lastImage.endsWith(i));
+    const isC3 = lastImage && lastImage.endsWith('_c3.jpg');
 
     if (lastImage !== n.img) {
-      if (n.img === 'pink_s.jpg' && isAD) {
+      if (n.img === 'pink_s.jpg' && !isC3) {
         navLeft();
 
         return render();
       }
 
-      if (n.img === 'pink_s.jpg' && !isAD) {
+      if (n.img === 'pink_s.jpg' && isC3) {
         $(currentIMG)
           .css({
             position: 'relative',
