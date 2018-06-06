@@ -38,4 +38,15 @@ $(() => {
       .css('position', 'absolute');
     $(`#buttons > button[id!='${$btnID}']`).css('background-color', '#666f8b');
   });
+
+  $('.name').hover(
+    function() {
+      const id = $(this).attr('name');
+
+      $('#thumbnail')
+        .fadeTo(100, 0.1, () => $('#thumbnail').css('background-image', `url("/info/${id}?image=true")`))
+        .fadeTo(100, 0.2);
+    },
+    () => {}
+  );
 });

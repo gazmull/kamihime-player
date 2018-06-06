@@ -102,20 +102,36 @@ h2 {
   margin-left: 15px;
 }
 
-#name {
+.name {
   display: block;
   word-spacing: -1;
 }
 
-#name a:link,
-#name a:visited {
+.name a:link,
+.name a:visited {
   font-size: 18px;
   color: #fa64e1;
   text-decoration: none;
 }
 
-#name a:hover {
+.name a:hover {
   color: white;
+}
+
+#thumbnail {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 52px;
+  width: 640px;
+  height: 640px;
+  opacity: 0.2;
+  mask-image:
+    radial-gradient(circle at center 35%, black 50%, transparent 78%);
+  -webkit-mask-image:
+    radial-gradient(circle at center 35%, black 50%, transparent 78%);
+  -moz-mask-image:
+    radial-gradient(circle at center 35%, black 50%, transparent 78%);
 }
 
 /* fix for mozilla firefox outlines */

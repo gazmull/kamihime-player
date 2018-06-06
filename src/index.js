@@ -35,6 +35,7 @@ app
     if (image) {
       const img = fs.createReadStream(`${__dirname}/static/scenarios/0000/misc/${character.model}`);
 
+      img.on('error', err => console.log(err));
       res.setHeader('Content-Type', 'image/png');
 
       return img.pipe(res);
