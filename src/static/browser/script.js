@@ -44,9 +44,9 @@ $(() => {
       const id = $(this).attr('name');
 
       $('#thumbnail')
-        .fadeTo(100, 0.1, () => $('#thumbnail').css('background-image', `url("/info/${id}?image=true")`))
-        .fadeTo(100, 0.2);
+        .css('background-image', `url("/info/${id}?image=true")`)
+        .show();
     },
-    () => {}
+    () => $('#thumbnail').hide()
   );
 });
