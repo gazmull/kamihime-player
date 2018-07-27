@@ -12,18 +12,14 @@ $(() => {
   let lastScriptIDX = -1;
   let currentScriptIDX = 0;
 
-  /* eslint-disable brace-style */
-
-  function lastScript() { return script[lastScriptIDX]; }
-  function currentScript() { return script[currentScriptIDX]; }
-
-  /* eslint-disable brace-style */
+  const lastScript = () => script[lastScriptIDX];
+  const currentScript = () => script[currentScriptIDX];
 
   let bgEl = [];
   let exEl = [];
 
   for (const bg of bgs)
-    if (bgEl.indexOf(bg) > -1) continue;
+    if (bgEl.includes(bg)) continue;
     else {
       $('<div/>', { id: bg })
         .css({
@@ -41,7 +37,7 @@ $(() => {
     }
 
   for (const expression of expressions)
-    if (exEl.indexOf(expression) > -1) continue;
+    if (exEl.includes(expression)) continue;
     else {
       $('<div/>', { id: expression })
         .css({
@@ -85,8 +81,8 @@ $(() => {
 
   render();
 
-  $('button').click(function() {
-    const code = $(this).attr('nav');
+  $('button').click(({ currentTarget: $this }) => {
+    const code = $($this).attr('nav');
 
     switch (code) {
       case 'left':

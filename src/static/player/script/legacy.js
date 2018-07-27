@@ -9,11 +9,7 @@ $(() => {
   let lastImage;
   let sequenceIDX = 0;
 
-  /* eslint-disable brace-style */
-
-  function newSeq() { return scr[sequenceIDX]; }
-
-  /* eslint-disable brace-style */
+  const newSeq = () => scr[sequenceIDX];
 
   for (const image of images)
     $('<div/>', {
@@ -32,8 +28,8 @@ $(() => {
 
   render();
 
-  $('button').click(function() {
-    const code = $(this).attr('nav');
+  $('button').click(({ currentTarget: $this }) => {
+    const code = $($this).attr('nav');
 
     switch (code) {
       case 'left':

@@ -41,14 +41,16 @@ ul {
   overflow: hidden;
   margin:-8px -7px;
   background-color: #222222;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
 }
 
 li {
-  display: inline;
-  float: left;
+  display: inline-block;
 }
 
-li a {
+li a, li a:link, li a:visited {
   display: block;
   color: white;
   text-align: center;
@@ -152,7 +154,7 @@ li a:active {
 
 body {
   background-color: #2f3136;
-  color: #c9cdd3;
+  color: #a7aebc;
   font-family: 'Open Sans', sans-serif;
 }
 

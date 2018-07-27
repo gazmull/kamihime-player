@@ -20,37 +20,37 @@ html
         visibility: hidden;
         z-index: -1;
         opacity: 0;
-        transform: translateX(-30%);
-        transition: all 0s 0.25s, opacity 0.25s ease;
+        transform: translateX(-50%);
+        transition: all 0.25s ease;
       }
 
       .hiddenInstant {
         visibility: hidden;
         z-index: -1;
         opacity: 0;
-        transform: translateX(-30%);
+        transform: translateX(-50%);
       }
   body
     ul
       include constants/navigation.pug
       li(style = 'float: right; user-select: none;')
         a Browser
-    br
+    include constants/lb.pug
     #control
       #buttons
-        button(class = 'toggleForm' id = 'abtn' style = 'background-color: #ff65ae;' type = 'button' nav = '#all') <b>ALL</b>
+        button(class = 'toggleForm' id = 'allbtn' style = 'background-color: #666f8b;' type = 'button' nav = '#all') <b>ALL</b>
         | 
-        button(class = 'toggleForm' id = 'sbtn' style = 'background-color: #666f8b;' type = 'button' nav = '#souls') <b>SOUL</b>
+        button(class = 'toggleForm' id = 'soulsbtn' style = 'background-color: #666f8b;' type = 'button' nav = '#souls') <b>SOUL</b>
         | 
-        button(class = 'toggleForm' id = 'ebtn' style = 'background-color: #666f8b;' type = 'button' nav = '#eidolons') <b>EIDOLON</b>
+        button(class = 'toggleForm' id = 'eidolonsbtn' style = 'background-color: #666f8b;' type = 'button' nav = '#eidolons') <b>EIDOLON</b>
         | 
-        button(class = 'toggleForm' id = 'ssrabtn' style = 'background-color: #666f8b;' type = 'button' nav = '#ssras') <b>SSR (AWAKENED)</b>
+        button(class = 'toggleForm' id = 'ssrasbtn' style = 'background-color: #666f8b;' type = 'button' nav = '#ssras') <b>SSR (AWAKENED)</b>
         | 
-        button(class = 'toggleForm' id = 'ssrbtn' style = 'background-color: #666f8b;' type = 'button' nav = '#ssrs') <b>&nbsp;SSR&nbsp;</b>
+        button(class = 'toggleForm' id = 'ssrsbtn' style = 'background-color: #666f8b;' type = 'button' nav = '#ssrs') <b>&nbsp;SSR&nbsp;</b>
         | 
-        button(class = 'toggleForm' id = 'srbtn' style = 'background-color: #666f8b;' type = 'button' nav = '#srs') <b>&nbsp;&nbsp;SR&nbsp;&nbsp;</b>
+        button(class = 'toggleForm' id = 'srsbtn' style = 'background-color: #666f8b;' type = 'button' nav = '#srs') <b>&nbsp;&nbsp;SR&nbsp;&nbsp;</b>
         | 
-        button(class = 'toggleForm' id = 'rbtn' style = 'background-color: #666f8b;' type = 'button' nav = '#rs') <b>&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;&nbsp;&nbsp;</b>
+        button(class = 'toggleForm' id = 'rsbtn' style = 'background-color: #666f8b;' type = 'button' nav = '#rs') <b>&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;&nbsp;&nbsp;</b>
       #search
         input(type = 'text' id = 'searchBar' size = '35' class = 'avWA' placeholder = 'Search by name...')
     br

@@ -15,7 +15,7 @@ html
       include constants/navigation.pug
       li(style='float: right; user-select: none;')
         +name
-    br
+    include constants/lb.pug
     #episodes
       - const { name, intro, harem1, harem2 } = character;
       - const episodes = [intro, harem1, harem2];

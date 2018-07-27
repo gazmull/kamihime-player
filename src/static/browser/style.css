@@ -6,6 +6,9 @@ ul {
   overflow: hidden;
   margin: -8px -7px;
   background-color: #222222;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
 }
 
 li {
@@ -120,7 +123,7 @@ h2 {
 
 #thumbnail {
   display: none;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 52px;
   width: 640px;

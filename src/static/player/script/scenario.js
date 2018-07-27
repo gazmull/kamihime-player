@@ -13,12 +13,8 @@ $(() => {
   let sequenceIDX = 0;
   let talkIDX = talkVal;
 
-  /* eslint-disable brace-style */
-
-  function newSeq() { return script[sequenceIDX]; }
-  function maxSequenceTalk() { return newSeq().talk.length - 1; }
-
-  /* eslint-disable brace-style */
+  const newSeq = () => script[sequenceIDX];
+  const maxSequenceTalk = () => newSeq().talk.length - 1;
 
   for (const image of images)
     $('<div/>', {
@@ -57,8 +53,8 @@ $(() => {
 
   render();
 
-  $('button').click(function() {
-    const code = $(this).attr('nav');
+  $('button').click(({ currentTarget: $this }) => {
+    const code = $($this).attr('nav');
 
     switch (code) {
       case 'left':

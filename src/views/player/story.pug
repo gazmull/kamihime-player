@@ -14,11 +14,11 @@ html
     title Kamihime Player
 
   body
+    ul
+      include ../constants/navigation.pug
+      li(style="float: right; user-select: none;")
+        a Story Mode
     center
-      ul
-        include ../constants/navigation.pug
-        li(style="float: right; user-select: none;")
-          a Story Mode
       include ../constants/buttons.pug
 
       #panel(style = 'width: 640px;')
